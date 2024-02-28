@@ -10,7 +10,7 @@ for row in loc.values:
 avg = round(df['Оценка за любимый предмет'].mean(), 3)
 print(f'Средний балл по классу: {avg}')
 
-for subject in pd.unique(df['Любимый предмет']):
+for subject in sorted(pd.unique(df['Любимый предмет'])):
     loc = df[df['Любимый предмет'] == subject]
     avg = round(loc['Оценка за любимый предмет'].mean(), 3)
     print(f'Средний балл по предмету {subject}: {avg}')
