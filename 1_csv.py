@@ -4,7 +4,7 @@ count = 0
 sum = 0
 subjects = {}  # словарь для вычисления средних по предметам
 for line in f.readlines():
-    a = line.split(';')
+    a = line.split(',')
     subject = a[3]
     mark = int(a[4])
     sum += mark
